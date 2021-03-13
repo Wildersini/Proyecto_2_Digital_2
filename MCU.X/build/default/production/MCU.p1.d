@@ -1,5 +1,5 @@
 build/default/production/MCU.p1:  \
 MCU.c  \
-I2C.h  \
+UART.h  \
 OSC.h  \
-UART.h 
+I2C.h 

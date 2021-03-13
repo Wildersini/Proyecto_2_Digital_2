@@ -2499,11 +2499,6 @@ extern __bank0 __bit __timeout;
 
 
 
-
-
-
-
-
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -2637,56 +2632,33 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 9 "./UART.h" 2
+# 4 "./UART.h" 2
 
-void initUSART (void);
-void baud (void);
-void conf_tx (void);
-void conf_rc (void);
-uint8_t R_UART ();
-void W_UART_S (char *a);
+
+
+
+
+
+
+void TX (void);
+void RX (void);
 # 16 "UART.c" 2
+# 38 "UART.c"
+void TX (void) {
+    TXSTAbits.SYNC=0;
+    TXSTAbits.TXEN=1;
+    TXSTAbits.BRGH=1;
+    TXSTAbits.TX9=0;
+    BAUDCTLbits.BRG16=0;
+    SPBRG=25;
+    SPBRGH=0;
 
-void initUSART (void){
-    TXSTAbits.TX9 = 0;
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-    BAUDCTLbits.BRG16 = 0;
-    SPBRG = 25;
-    SPBRGH = 0;
-    TXSTAbits.TXEN = 1;
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.CREN = 1;
 }
-void baud (void) {
-    SPBRG = 12;
-}
-
-void conf_tx (void) {
-    TXSTAbits.CSRC = 0;
-    TXSTAbits.TX9 = 0;
-    TXSTAbits.TXEN = 1;
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 0;
-    TXSTAbits.TRMT = 0;
-    TXSTAbits.TX9D = 0;
-}
-
-void conf_rc (void) {
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.SREN = 0;
-    RCSTAbits.CREN = 1;
-    RCREG = 0;
-}
-
-void Wr_UART (uint8_t a) {
-    while (!TRMT);
-    TXREG = a;
-}
-# 63 "UART.c"
-uint8_t R_UART () {
-    while (!RCIF);
-    return RCREG;
+void RX (void) {
+    RCSTAbits.SPEN=1;
+    RCSTAbits.CREN=1;
+    RCSTAbits.FERR=0;
+    RCSTAbits.OERR=0;
+    RCSTAbits.RX9=0;
+    PIE1bits.RCIE=1;
 }

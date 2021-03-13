@@ -1,5 +1,4 @@
-// CONFIG1
-#pragma config FOSC = EXTRC_NOCLKOUT// Oscillator Selection bits (RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN)
+#pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
@@ -13,228 +12,208 @@
 // CONFIG2
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
-
-//******************************************************************************
-//Libreria 
-//******************************************************************************
+// #pragma config statements should precede project file includes.
+// Use project enums instead of #define for ON and OFF.
+#define _XTAL_FREQ 4000000
 #include <xc.h>
-#include "I2C.h"
-#include "OSC.h"
+#include <stdint.h>
 #include "UART.h"
+#include "OSC.h"
+#include "I2C.h"
 #include <stdio.h>
 #define _XTAL_FREQ 4000000
 
-//******************************************************************************
-//Variable 
-//******************************************************************************
-uint8_t T, D, H, M, S, FS, FM, FH, FD, x, w, y, z, a; 
-uint8_t D_W, H_I, H_D, M_I, M_D, S_I, S_D;
+//**************************
+// Prototipos de funciones
+//**************************
+void Setup       (void);
+void send_hora   (void);
+void send_min    (void);
+void send_seg    (void);
+void CONVET      (void);
+void first_send  (void);
 
-//******************************************************************************
-//Declaración de funciones
-//******************************************************************************
-void setup (void);          //Configuración
-void dia (void);            //Datos de día
-void hora (void);           //Datos de hora
-void minuto (void);         //Datos de minutos
-void segundo (void);        //Datos de segundos
-void conversion (void);     //Para la conversion por algunos desfases
-void enviar (void);         //Envio de datos para el ESP32
-
-//******************************************************************************
-//Interrupciones
-//******************************************************************************
-void __interrupt () isr (void) {
-    if (PIR1bits.RCIF == 1) {
-        T = 0;
-        T = RCREG;
-        if (T == 0x30) {
-            PORTCbits.RC1 = 0;} if (T == 0x31) {
-            PORTCbits.RC1 = 1;
-        } if (T == 0x32) {
-            PORTCbits.RC2 = 0; }
-        if (T == 0x33) {
-            PORTCbits.RC2 = 1;
-        } if (T == 0x34) {
-            FS = 1;
-        } if (T == 0x35) {
-            FM = 1;}
-        if (T == 0x36) {
-            FH = 1; }
-        /*if (T == 0x37) {
-            FD = 1; }*/
+//**************************
+// Variables
+//**************************
+uint8_t L,Z,z,r,C,q,h,m,s,M,b,g;
+uint8_t temp;
+uint8_t mou,day,hor,min,seg,week,year;
+uint8_t mou_u,day_u,hor_u,min_u,seg_u ;
+uint8_t mou_t,day_t,hor_t,min_t,seg_t ;
+uint8_t segundos ;
+//**************************
+//                            interuption 
+//**************************
+void __interrupt ( ) isr(void){ 
+    if (PIR1bits.RCIF==1){ 
+        temp = 0;
+        temp = RCREG;
+        if (temp == 0X30){PORTAbits.RA0=0;} //turn off led1
+        if (temp == 0X31){PORTAbits.RA0=1;} //turn on led1
+        if (temp == 0X32){PORTAbits.RA1=0;} //turn off led2
+        if (temp == 0X33){PORTAbits.RA1=1;} //turn on led2
+        if (temp == 0X34){C=1;} //seg
+        if (temp == 0X35){b=1;} //min
+        if (temp == 0X36){g=1;} //hora
     }
-     if (PIR1bits.TXIF == 1){
-        if (FS == 1){
-            segundo ();
-        }
-        if (FM == 1){
-            minuto ();
-        }
-        if (FH == 1){
-            hora ();
-        }
-        /*if (FD == 1){
-            dia ();
-        }*/
-        PIE1bits.TXIE = 0;
-     }
-    if (INTCONbits.TMR0IF == 1) {
-        TMR0 = 236;
-        INTCONbits.TMR0IF = 0;
-        a ++;
-        if (a == 10) {
-            a = 0;
+    if (INTCONbits.TMR0IF==1){//este if esta revisando la bandera del timer0
+        TMR0=236;             //le cargamos un valor al timer0
+        INTCONbits.TMR0IF=0;  //reset la bandera
+        r++;
+        if(r==10){
+            r=0;
         }
     }
-    // La interrupciones son para el funcionamiento de las leds haciendo una llamada 
-    // al mismo cada 10 ms 
 }
-
-//******************************************************************************
-//Main
-//******************************************************************************
+//**************************
+// Ciclo principal
+//**************************
 void main(void) {
-    //UART
-    setup ();
-    initUSART ();
-    PORTCbits.RC1=1;
-    PORTCbits.RC2=1;
-    PORTCbits.RC1=0;
-    PORTCbits.RC2=0;
-    I2C_Master_Init(100000); 
-    
-    while (1) {
+    Setup();   // general set up
+    PORTAbits.RA0=1;//indicadores del  pic  esta on
+    PORTAbits.RA1=1;//indicadores del  pic  esta on
+    PORTAbits.RA0=0;//indicadores del  pic  esta on
+    PORTAbits.RA1=0;//indicadores del  pic  esta on
+    I2C_Master_Init(100000); //set up of clk rate 
+    //**************************
+    // Loop principal
+    //**************************
+    while (1){
+// sequence to read that i2c 
         I2C_Master_Start();
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0x00);
         I2C_Master_RepeatedStart();
         I2C_Master_Write(0xD1);
-        S =  I2C_Master_Read(1);
-        M =  I2C_Master_Read(1);
-        H =  I2C_Master_Read(1);
-        D = I2C_Master_Read(1);
+        seg =  I2C_Master_Read(1);
+        min =  I2C_Master_Read(1);
+        week =  I2C_Master_Read(1);
+        hor =  I2C_Master_Read(1);
+        day =  I2C_Master_Read(1);
+        mou =  I2C_Master_Read(1);
+        year=  I2C_Master_Read(0);
         I2C_Master_Stop();
-        conversion ();
-    }
-    return;
-}
-
-//******************************************************************************
-//Funciones
-//******************************************************************************
-void setup (void) {
-    PORTA = 0;
-    PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
-    PORTE = 0;
-    
-    TRISA = 0;
-    TRISB = 0;
-    TRISC = 0;
-    TRISD = 0;
-    TRISE = 0;
-    
-    ANSEL = 0;
-    ANSELH = 0;
-    
-    //timer
-    INTCONbits.GIE = 1; 
-    INTCONbits.PEIE = 1;
-    INTCONbits.TMR0IE = 1;
-    INTCONbits.TMR0IF = 0;
+        CONVET();//extraction of usable bits from location 
+        first_send();// 
+    }}
+//**************************
+// Configuración
+//**************************
+void Setup(void){
+//puertos on clear 
+    PORTA =  0; //PORTA EN 0
+    PORTB =  0; //PORTB EN 0
+    PORTC =  0; //PORTC EN 0
+    PORTD =  0; //PORTD EN 0
+    PORTE =  0; //PORTE EN 0
+// inputs y otputs
+    TRISA =  0B00000000; //INPUT EN porta
+    TRISB =  0B00000000; //INPUT EN portb
+    TRISC =  0B00000000; //INPUT EN portc
+    TRISD =  0B00000000; //INPUT EN portd
+    TRISE =  0B0000;     //INPUT EN porte
+// analog inputs 
+    ANSEL =  0B00000000; // solo estamos usando el RA0 como analogico 
+    ANSELH = 0B00000000;
+// Configuración de timer0------------------------------------------------------
+    INTCONbits.GIE=1; //on todas las interrupts global 
+    INTCONbits.PEIE=1;//on periferal
+    INTCONbits.TMR0IE=1;//on timer 0
+    INTCONbits.TMR0IF=0;// clean flags
     PIE1bits.RCIE = 1;
-    OPTION_REGbits.T0CS = 0; 
-    OPTION_REGbits.T0SE = 0; 
-    OPTION_REGbits.PSA = 0; 
-    //aca se configuro el timer0 para poder utilizarse en el pic con el clk
-    
-    //pre scaler
-    OPTION_REGbits.PS0 = 1;
-    OPTION_REGbits.PS1 = 1;
-    OPTION_REGbits.PS2 = 1;
-    
-    
-    //oscilador
-    initOsc(6);   
+    OPTION_REGbits.T0CS=0; //internal instructuion cycle clock 
+    OPTION_REGbits.T0SE=0; // edge selection 
+    OPTION_REGbits.PSA=0; //
+//SELECT pre_scaler -----------------------------------------------------------
+    OPTION_REGbits.PS0=1;
+    OPTION_REGbits.PS1=1;
+    OPTION_REGbits.PS2=1;
+//set up of libery  -----------------------------------------------------------   
+    initOsc(6);
+    RX(); //set up to send data 
+    TX(); //set up to recive  
+}
+//**************************
+// funciones 
+//**************************
+void CONVET      (void){
+    mou_t = ((mou & 0b00010000)>>4);
+    mou_u = (mou  & 0b00001111);   
+    day_t = ((day & 0b00110000)>>4); 
+    day_u = (day  & 0b00001111);   
+    hor_t = ((hor & 0b11000000)>>4);
+    hor_u = (hor  & 0b00000011);
+    min_t = ((min & 0b01110000)>>4);
+    min_u = (min  & 0b00001111);
+    seg_t = ((seg & 0b01110000)>>4);
+    seg_u = (seg  & 0b00001111);    
 }
 
-void conversion (void) {
-    D_W = (D & 0b00000111);
-    H_D = ((H & 0b00110000)>>4);
-    H_I = (H  & 0b00001111);
-    M_D = ((M & 0b01110000)>>4);
-    M_I = (M  & 0b00001111);
-    S_D = ((S & 0b01110000)>>4);
-    S_I = (S  & 0b00001111);
+void first_send  (void){
+    if (C==1){send_seg();}
+    if (b==1){send_min();}
+    if (g==1){send_hora();}
 }
-
-/*void dia (void) {
-    switch (x) {
+void send_hora   (void){
+       // this send the tenths and units of hour
+    switch (h){
         case 0:
-            TXREG = (D_W + 0x30);
-            x ++;
+            TXREG = (hor_t+0x30);
+            while(!TXSTAbits.TRMT);
+            h++;
             break;
         case 1:
-            TXREG = (0x3A);
-            x = 0;
-            FD = 0;
-            break;    
-            
-    }
-}*/
-
-void hora (void) {
-    switch (w) {
-        case 0:
-            TXREG = (H_D + 0x30);
-            w ++;
-            break;
-        case 1:
-            TXREG = (H_I + 0x31);
-            w ++;
+            TXREG = (hor_u+0x30);
+            while(!TXSTAbits.TRMT);
+            h++;
             break;
         case 2:
             TXREG = (0x3A);
-            w = 0;
-            FH = 0;
-            break;    
-    }
-}
-
-void minuto (void) {
-    switch (y) {
+            while(!TXSTAbits.TRMT);
+            h=0;
+            g=0;
+            break;
+    }}
+void send_min    (void){
+       // this send the tenths and units of min
+    switch (m){
         case 0:
-            TXREG = (M_D + 0x30);
-            y ++;
+             TXREG = (min_t+0x30);
+             while(!TXSTAbits.TRMT);
+             m++;
             break;
         case 1:
-            TXREG = (M_I + 0x31);
-            y ++;
+             TXREG = (min_u +0x30);
+             while(!TXSTAbits.TRMT);
+             m++;
             break;
         case 2:
-            TXREG = (0x3A);
-            y = 0;
-            FM = 0;
-            break;    
-    }
-}
-
-void segundo (void) {
-    switch (z) {
+            TXREG = (0x03);
+            while(!TXSTAbits.TRMT);
+            m=0;
+            b=0;
+            break;
+    }}         
+void send_seg    (void){
+    // this send the tenths and units of seg 
+    switch (s){
         case 0:
-            TXREG = (S_D + 0x30);        
-            z ++;
+            TXREG = (seg_t+0x30);
+            while(!TXSTAbits.TRMT);
+            s++;
             break;
         case 1:
-            TXREG = (S_I + 0x31);           
-            z ++;
+            TXREG = (seg_u+0x30);
+            while(!TXSTAbits.TRMT);
+            s++;
+            s=0;
+            C=0;
             break;
         case 2:
-            TXREG = (0x3A);           
-            z = 0;
-            FS = 0;
-            break;    
-    }
-}
+            TXREG = (0x03);
+            while(!TXSTAbits.TRMT);
+            s=0;
+            C=0;
+            break;
+    }}

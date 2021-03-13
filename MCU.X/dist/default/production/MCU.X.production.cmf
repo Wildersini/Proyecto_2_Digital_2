@@ -12,33 +12,36 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\MCU.X.production.o
-cinit CODE 0 15 15 1B 2
-text1 CODE 0 330 330 26 2
-text2 CODE 0 1B0 1B0 5E 2
-text3 CODE 0 356 356 14 2
-text4 CODE 0 20E 20E 3E 2
-text5 CODE 0 377 377 A 2
-text6 CODE 0 381 381 9 2
-text7 CODE 0 38A 38A 9 2
-text8 CODE 0 393 393 9 2
-text9 CODE 0 286 286 32 2
-text10 CODE 0 36A 36A D 2
-text11 CODE 0 24C 24C 3A 2
-text12 CODE 0 148 148 68 2
-text13 CODE 0 C3 C3 85 2
-text14 CODE 0 2B8 2B8 28 2
-text15 CODE 0 2E0 2E0 28 2
-text16 CODE 0 308 308 28 2
-maintext CODE 0 30 30 93 2
-cstackCOMMON COMMON 1 76 76 6 1
-cstackBANK0 BANK0 1 20 20 16 1
-intentry CODE 0 4 4 E 2
-bssBANK0 BANK0 1 36 36 F 1
-bssCOMMON COMMON 1 70 70 6 1
+cinit CODE 0 13 13 10 2
+text1 CODE 0 3AB 3AB 25 2
+text2 CODE 0 24F 24F 46 2
+text3 CODE 0 295 295 3E 2
+text4 CODE 0 2D3 2D3 3E 2
+text5 CODE 0 34B 34B 30 2
+text6 CODE 0 19B 19B 5C 2
+text7 CODE 0 3D0 3D0 F 2
+text8 CODE 0 3EC 3EC B 2
+text9 CODE 0 3F7 3F7 A 2
+text10 CODE 0 401 401 9 2
+text11 CODE 0 40A 40A 9 2
+text12 CODE 0 413 413 9 2
+text13 CODE 0 37B 37B 30 2
+text14 CODE 0 3DF 3DF D 2
+text15 CODE 0 311 311 3A 2
+text16 CODE 0 D6 D6 68 2
+text17 CODE 0 13E 13E 5D 2
+text18 CODE 0 1F7 1F7 58 2
+maintext CODE 0 23 23 B3 2
+cstackCOMMON COMMON 1 70 70 8 1
+cstackBANK0 BANK0 1 3C 3C 11 1
+intentry CODE 0 4 4 C 2
+bssBANK0 BANK0 1 20 20 1C 1
+clrtext CODE 0 41C 41C 8 2
+bssCOMMON COMMON 1 78 78 3 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
+$C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
 reset_vec CODE 0 0 0 3 2
-end_init CODE 0 12 12 3 2
+end_init CODE 0 10 10 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -46,32 +49,32 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 45-6F 1
+RAM 4D-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 45-6F 1
+BANK0 4D-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 39C-1FFF 2
+CONST 424-1FFF 2
 ENTRY 3-3 2
-ENTRY 39C-1FFF 2
+ENTRY 424-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 39C-1FFF 2
+CODE 424-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7C-7D 1
+COMMON 7B-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 39C-1FFF 2
+STRCODE 424-1FFF 2
 STRING 3-3 2
-STRING 39C-1FFF 2
+STRING 424-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -86,277 +89,286 @@ STRING 39C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MCU.X.production.o
-15 cinit CODE >1014:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-15 cinit CODE >1017:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-15 cinit CODE >1091:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-16 cinit CODE >1092:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-17 cinit CODE >1093:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-18 cinit CODE >1094:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-19 cinit CODE >1095:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-1A cinit CODE >1096:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-1B cinit CODE >1099:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-1C cinit CODE >1100:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-1D cinit CODE >1101:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-1E cinit CODE >1102:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-1F cinit CODE >1103:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-20 cinit CODE >1104:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-21 cinit CODE >1105:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-22 cinit CODE >1106:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-23 cinit CODE >1107:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-24 cinit CODE >1108:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-25 cinit CODE >1109:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-26 cinit CODE >1110:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-27 cinit CODE >1111:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-28 cinit CODE >1112:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-29 cinit CODE >1113:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-2A cinit CODE >1114:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-2B cinit CODE >1115:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-2C cinit CODE >1121:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-2C cinit CODE >1123:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-2D cinit CODE >1124:C:\Users\WILDER~1\AppData\Local\Temp\sn10.s
-4 intentry CODE >47:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-308 text16 CODE >188:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-308 text16 CODE >189:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-309 text16 CODE >191:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-30C text16 CODE >192:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-310 text16 CODE >193:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-311 text16 CODE >195:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-315 text16 CODE >199:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-317 text16 CODE >200:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-318 text16 CODE >201:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-319 text16 CODE >202:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-31A text16 CODE >203:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-32F text16 CODE >204:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2E0 text15 CODE >206:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2E0 text15 CODE >207:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2E1 text15 CODE >209:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2E4 text15 CODE >210:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2E8 text15 CODE >211:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2E9 text15 CODE >213:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2ED text15 CODE >217:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2EF text15 CODE >218:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2F0 text15 CODE >219:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2F1 text15 CODE >220:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2F2 text15 CODE >221:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-307 text15 CODE >222:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2B8 text14 CODE >224:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2B8 text14 CODE >225:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2B9 text14 CODE >227:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2BC text14 CODE >228:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2C0 text14 CODE >229:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2C1 text14 CODE >231:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2C5 text14 CODE >235:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2C7 text14 CODE >236:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2C8 text14 CODE >237:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2C9 text14 CODE >238:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2CA text14 CODE >239:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-2DF text14 CODE >240:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-C3 text13 CODE >47:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-C3 text13 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-C7 text13 CODE >49:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-C8 text13 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-CC text13 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-D2 text13 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-D9 text13 CODE >53:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-DA text13 CODE >54:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-E0 text13 CODE >55:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-E1 text13 CODE >56:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-E7 text13 CODE >57:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-E8 text13 CODE >58:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-EE text13 CODE >59:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-F0 text13 CODE >60:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-F6 text13 CODE >61:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-F8 text13 CODE >62:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-FE text13 CODE >63:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-100 text13 CODE >66:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-100 text13 CODE >67:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-104 text13 CODE >68:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-109 text13 CODE >69:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-10E text13 CODE >71:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-115 text13 CODE >72:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-11A text13 CODE >74:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-121 text13 CODE >75:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-126 text13 CODE >80:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-129 text13 CODE >82:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-12D text13 CODE >83:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-130 text13 CODE >84:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-131 text13 CODE >85:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-135 text13 CODE >86:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-13B text13 CODE >87:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-13C text13 CODE >92:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-148 text12 CODE >5:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-148 text12 CODE >13:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-152 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-15A text12 CODE >15:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-15C text12 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-15D text12 CODE >17:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-166 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-16A text12 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-16E text12 CODE >21:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-177 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-189 text12 CODE >23:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-197 text12 CODE >24:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-198 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-1A1 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-1A7 text12 CODE >29:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-1AF text12 CODE >30:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-24C text11 CODE >9:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-24C text11 CODE >11:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-250 text11 CODE >12:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-253 text11 CODE >13:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-282 text11 CODE >14:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-283 text11 CODE >15:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-284 text11 CODE >16:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-285 text11 CODE >17:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-36A text10 CODE >25:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-36A text10 CODE >27:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-376 text10 CODE >28:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-286 text9 CODE >67:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-286 text9 CODE >70:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-28B text9 CODE >71:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-28E text9 CODE >72:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-293 text9 CODE >73:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-29C text9 CODE >74:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2A1 text9 CODE >75:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2A9 text9 CODE >76:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2AC text9 CODE >77:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2AD text9 CODE >78:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2B0 text9 CODE >79:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2B0 text9 CODE >80:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2B1 text9 CODE >81:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-2B7 text9 CODE >82:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-393 text8 CODE >40:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-393 text8 CODE >42:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-398 text8 CODE >43:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-39B text8 CODE >44:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-38A text7 CODE >32:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-38A text7 CODE >34:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-38F text7 CODE >35:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-392 text7 CODE >36:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-381 text6 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-381 text6 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-386 text6 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-389 text6 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-377 text5 CODE >58:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-377 text5 CODE >60:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-37C text5 CODE >61:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-380 text5 CODE >62:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
-20E text4 CODE >163:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-20E text4 CODE >164:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-215 text4 CODE >165:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-222 text4 CODE >166:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-227 text4 CODE >167:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-234 text4 CODE >168:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-239 text4 CODE >169:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-246 text4 CODE >170:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-24B text4 CODE >171:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-356 text3 CODE >17:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-356 text3 CODE >18:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-359 text3 CODE >19:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-35A text3 CODE >20:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-35B text3 CODE >21:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-35E text3 CODE >22:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-362 text3 CODE >23:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-363 text3 CODE >24:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-364 text3 CODE >25:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-367 text3 CODE >26:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-368 text3 CODE >27:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-369 text3 CODE >28:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-1B0 text2 CODE >6:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1B3 text2 CODE >7:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1B4 text2 CODE >8:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1B4 text2 CODE >9:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1B7 text2 CODE >10:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1B8 text2 CODE >11:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1B9 text2 CODE >12:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1BA text2 CODE >13:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1BA text2 CODE >14:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1BD text2 CODE >15:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1BE text2 CODE >16:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1BF text2 CODE >17:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C0 text2 CODE >18:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C0 text2 CODE >19:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C3 text2 CODE >20:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C4 text2 CODE >21:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C5 text2 CODE >22:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C6 text2 CODE >23:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C6 text2 CODE >24:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1C9 text2 CODE >25:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1CA text2 CODE >26:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1CB text2 CODE >27:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1CC text2 CODE >28:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1CC text2 CODE >29:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1CF text2 CODE >30:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D0 text2 CODE >31:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D1 text2 CODE >32:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D2 text2 CODE >33:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D2 text2 CODE >34:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D5 text2 CODE >35:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D6 text2 CODE >36:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D7 text2 CODE >37:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D8 text2 CODE >38:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1D8 text2 CODE >39:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1DB text2 CODE >40:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1DC text2 CODE >41:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1DD text2 CODE >42:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1DE text2 CODE >43:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1DE text2 CODE >44:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E1 text2 CODE >45:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E2 text2 CODE >46:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E3 text2 CODE >47:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E4 text2 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E4 text2 CODE >49:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E7 text2 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E8 text2 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1E9 text2 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-1EA text2 CODE >53:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-20C text2 CODE >54:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-20D text2 CODE >55:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
-330 text1 CODE >126:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-330 text1 CODE >127:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-333 text1 CODE >128:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-334 text1 CODE >129:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-335 text1 CODE >130:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-336 text1 CODE >131:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-337 text1 CODE >133:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-33A text1 CODE >134:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-33B text1 CODE >135:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-33C text1 CODE >136:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-33D text1 CODE >137:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-33E text1 CODE >139:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-341 text1 CODE >140:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-342 text1 CODE >143:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-343 text1 CODE >144:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-344 text1 CODE >145:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-345 text1 CODE >146:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-346 text1 CODE >147:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-349 text1 CODE >148:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-34A text1 CODE >149:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-34B text1 CODE >150:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-34C text1 CODE >154:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-34D text1 CODE >155:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-34E text1 CODE >156:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-34F text1 CODE >160:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-355 text1 CODE >161:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-30 maintext CODE >97:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-30 maintext CODE >99:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-35 maintext CODE >100:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-3A maintext CODE >101:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-3D maintext CODE >102:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-3E maintext CODE >103:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-3F maintext CODE >104:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-40 maintext CODE >105:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-4D maintext CODE >108:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-52 maintext CODE >109:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-5D maintext CODE >110:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-67 maintext CODE >111:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-6C maintext CODE >112:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-77 maintext CODE >113:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-88 maintext CODE >114:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-97 maintext CODE >115:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-A6 maintext CODE >116:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-B5 maintext CODE >117:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-BA maintext CODE >118:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+13 cinit CODE >1018:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+13 cinit CODE >1021:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+13 cinit CODE >1140:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+14 cinit CODE >1141:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+15 cinit CODE >1142:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+16 cinit CODE >1145:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+17 cinit CODE >1146:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+18 cinit CODE >1147:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+19 cinit CODE >1148:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+1A cinit CODE >1149:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+1F cinit CODE >1155:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+1F cinit CODE >1157:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+20 cinit CODE >1158:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+4 intentry CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+1F7 text18 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+1F7 text18 CODE >49:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+1FB text18 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+1FC text18 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+200 text18 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+207 text18 CODE >53:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+20E text18 CODE >54:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+215 text18 CODE >55:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+21C text18 CODE >56:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+224 text18 CODE >57:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+22C text18 CODE >58:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+234 text18 CODE >59:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+234 text18 CODE >60:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+238 text18 CODE >61:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+23A text18 CODE >62:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+23B text18 CODE >63:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+23F text18 CODE >64:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+245 text18 CODE >65:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+246 text18 CODE >68:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+13E text17 CODE >140:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+13E text17 CODE >141:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+14D text17 CODE >142:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+152 text17 CODE >143:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+15F text17 CODE >144:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+164 text17 CODE >145:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+171 text17 CODE >146:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+176 text17 CODE >147:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+183 text17 CODE >148:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+188 text17 CODE >149:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+195 text17 CODE >150:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+19A text17 CODE >151:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+D6 text16 CODE >5:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+D6 text16 CODE >13:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+E0 text16 CODE >14:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+E8 text16 CODE >15:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+EA text16 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+EB text16 CODE >17:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+F4 text16 CODE >18:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+F8 text16 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+FC text16 CODE >21:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+105 text16 CODE >22:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+117 text16 CODE >23:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+125 text16 CODE >24:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+126 text16 CODE >26:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+12F text16 CODE >27:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+135 text16 CODE >29:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+13D text16 CODE >30:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+311 text15 CODE >9:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+311 text15 CODE >11:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+315 text15 CODE >12:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+318 text15 CODE >13:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+347 text15 CODE >14:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+348 text15 CODE >15:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+349 text15 CODE >16:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+34A text15 CODE >17:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3DF text14 CODE >25:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3DF text14 CODE >27:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3EB text14 CODE >28:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+37B text13 CODE >67:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+37B text13 CODE >70:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+380 text13 CODE >71:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+383 text13 CODE >72:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+388 text13 CODE >73:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+391 text13 CODE >74:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+396 text13 CODE >75:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+39C text13 CODE >76:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+39F text13 CODE >77:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3A0 text13 CODE >78:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3A3 text13 CODE >79:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3A3 text13 CODE >80:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3A4 text13 CODE >81:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3AA text13 CODE >82:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+413 text12 CODE >40:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+413 text12 CODE >42:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+418 text12 CODE >43:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+41B text12 CODE >44:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+40A text11 CODE >32:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+40A text11 CODE >34:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+40F text11 CODE >35:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+412 text11 CODE >36:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+401 text10 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+401 text10 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+406 text10 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+409 text10 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3F7 text9 CODE >58:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3F7 text9 CODE >60:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3FC text9 CODE >61:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+400 text9 CODE >62:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
+3EC text8 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3EC text8 CODE >49:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3EF text8 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3F0 text8 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3F1 text8 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3F2 text8 CODE >53:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3F3 text8 CODE >54:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3F6 text8 CODE >55:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D0 text7 CODE >38:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D0 text7 CODE >39:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D3 text7 CODE >40:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D4 text7 CODE >41:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D5 text7 CODE >42:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D6 text7 CODE >43:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3D9 text7 CODE >44:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3DD text7 CODE >45:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+3DE text7 CODE >47:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+19B text6 CODE >6:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+19C text6 CODE >7:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+19D text6 CODE >8:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+19D text6 CODE >9:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A0 text6 CODE >10:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A1 text6 CODE >11:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A2 text6 CODE >12:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A3 text6 CODE >13:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A3 text6 CODE >14:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A6 text6 CODE >15:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A7 text6 CODE >16:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A8 text6 CODE >17:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A9 text6 CODE >18:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1A9 text6 CODE >19:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1AC text6 CODE >20:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1AD text6 CODE >21:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1AE text6 CODE >22:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1AF text6 CODE >23:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1AF text6 CODE >24:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B2 text6 CODE >25:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B3 text6 CODE >26:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B4 text6 CODE >27:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B5 text6 CODE >28:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B5 text6 CODE >29:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B8 text6 CODE >30:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1B9 text6 CODE >31:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1BA text6 CODE >32:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1BB text6 CODE >33:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1BB text6 CODE >34:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1BE text6 CODE >35:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1BF text6 CODE >36:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C0 text6 CODE >37:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C1 text6 CODE >38:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C1 text6 CODE >39:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C4 text6 CODE >40:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C5 text6 CODE >41:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C6 text6 CODE >42:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C7 text6 CODE >43:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1C7 text6 CODE >44:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1CA text6 CODE >45:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1CB text6 CODE >46:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1CC text6 CODE >47:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1CD text6 CODE >48:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1CD text6 CODE >49:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1D0 text6 CODE >50:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1D1 text6 CODE >51:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1D2 text6 CODE >52:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1D3 text6 CODE >53:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1F5 text6 CODE >54:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+1F6 text6 CODE >55:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
+34B text5 CODE >103:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+34B text5 CODE >105:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+34E text5 CODE >106:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+34F text5 CODE >107:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+350 text5 CODE >108:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+351 text5 CODE >109:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+352 text5 CODE >111:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+355 text5 CODE >112:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+356 text5 CODE >113:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+357 text5 CODE >114:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+358 text5 CODE >115:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+359 text5 CODE >117:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+35C text5 CODE >118:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+35D text5 CODE >120:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+35E text5 CODE >121:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+35F text5 CODE >122:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+360 text5 CODE >123:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+361 text5 CODE >124:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+364 text5 CODE >125:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+365 text5 CODE >126:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+366 text5 CODE >127:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+367 text5 CODE >129:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+368 text5 CODE >130:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+369 text5 CODE >131:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+36A text5 CODE >133:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+370 text5 CODE >134:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+375 text5 CODE >135:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+37A text5 CODE >136:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2D3 text4 CODE >158:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2D3 text4 CODE >160:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2D4 text4 CODE >162:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2D7 text4 CODE >163:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2DD text4 CODE >164:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2E3 text4 CODE >165:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2E4 text4 CODE >167:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2E7 text4 CODE >168:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2EE text4 CODE >172:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2F0 text4 CODE >173:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2F6 text4 CODE >174:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2F9 text4 CODE >175:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2FA text4 CODE >176:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2FB text4 CODE >177:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+295 text3 CODE >178:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+295 text3 CODE >180:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+296 text3 CODE >182:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+299 text3 CODE >183:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+29F text3 CODE >184:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2A5 text3 CODE >185:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2A6 text3 CODE >187:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2A9 text3 CODE >188:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2B0 text3 CODE >192:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2B2 text3 CODE >193:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2B8 text3 CODE >194:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2BB text3 CODE >195:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2BC text3 CODE >196:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2BD text3 CODE >197:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+24F text2 CODE >198:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+24F text2 CODE >200:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+250 text2 CODE >202:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+253 text2 CODE >203:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+259 text2 CODE >204:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+25F text2 CODE >205:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+260 text2 CODE >207:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+263 text2 CODE >208:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+269 text2 CODE >209:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+26F text2 CODE >210:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+270 text2 CODE >211:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+271 text2 CODE >212:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+272 text2 CODE >214:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+274 text2 CODE >215:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+27A text2 CODE >216:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+27D text2 CODE >217:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+27E text2 CODE >218:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+27F text2 CODE >219:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+3AB text1 CODE >153:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+3AB text1 CODE >154:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+3B7 text1 CODE >155:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+3C3 text1 CODE >156:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+3CF text1 CODE >157:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+23 maintext CODE >72:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+23 maintext CODE >73:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+28 maintext CODE >74:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2B maintext CODE >75:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2C maintext CODE >76:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2D maintext CODE >77:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+2E maintext CODE >78:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+3B maintext CODE >84:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+40 maintext CODE >85:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+49 maintext CODE >86:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+51 maintext CODE >87:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+56 maintext CODE >88:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+5F maintext CODE >89:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+6E maintext CODE >90:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+7D maintext CODE >91:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+8C maintext CODE >92:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+9B maintext CODE >93:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+A8 maintext CODE >94:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+B5 maintext CODE >95:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+C3 maintext CODE >96:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+C8 maintext CODE >97:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+CD maintext CODE >98:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+41C clrtext CODE >1127:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+41C clrtext CODE >1128:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+41D clrtext CODE >1129:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+41D clrtext CODE >1130:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+41E clrtext CODE >1131:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+41F clrtext CODE >1132:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+420 clrtext CODE >1133:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+421 clrtext CODE >1134:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+422 clrtext CODE >1135:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
+423 clrtext CODE >1136:C:\Users\WILDER~1\AppData\Local\Temp\sgqk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -369,102 +381,105 @@ BA maintext CODE >118:C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digi
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_D 74 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
-_H 73 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
-_M 72 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
-_S 71 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
-_T 75 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
-_a 3D 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_w 40 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_y 3F 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_z 3E 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_C 37 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_b 31 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_g 30 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_h 35 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_m 34 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_r 38 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_s 33 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\MCU.X.production.o
-__Hspace_0 39C 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+__Hspace_0 424 0 ABS 0 - -
+__Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
-I2C_Master_Init@c 2E 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+I2C_Master_Init@c 49 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_FH 43 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_FM 44 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_FS 70 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
+_RX 7D8 0 CODE 0 text8 dist/default/production\MCU.X.production.o
+_TX 7A0 0 CODE 0 text7 dist/default/production\MCU.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\MCU.X.production.o
-_RCIF 65 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\MCU.X.production.o
-_TRMT 4C1 0 ABS 0 - dist/default/production\MCU.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-_hora 610 0 CODE 0 text16 dist/default/production\MCU.X.production.o
-_main 60 0 CODE 0 maintext dist/default/production\MCU.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+_main 46 0 CODE 0 maintext dist/default/production\MCU.X.production.o
+_temp 7A 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
+_week 2C 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_year 2B 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MCU.X.production.o
-start 24 0 CODE 0 init C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-__size_of_hora 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+start 20 0 CODE 0 init C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\MCU.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-I2C_Master_Read@a 20 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-__size_of_segundo 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+__size_of_first_send 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+I2C_Master_Read@a 73 0 COMMON 1 cstackCOMMON dist/default/production\MCU.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\MCU.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\MCU.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-I2C_Master_Read@temp 24 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+I2C_Master_Read@temp 3C 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\MCU.X.production.o
+__end_of_send_hora 622 0 CODE 0 text4 dist/default/production\MCU.X.production.o
 __size_of_initOsc 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+_CONVET 27C 0 CODE 0 text17 dist/default/production\MCU.X.production.o
+__size_of_send_hora 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___lldiv 360 0 CODE 0 text12 dist/default/production\MCU.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-___stacklo 0 0 ABS 0 - C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
+__end_of___lldiv 27C 0 CODE 0 text16 dist/default/production\MCU.X.production.o
+_send_hora 5A6 0 CODE 0 text4 dist/default/production\MCU.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+___stacklo 0 0 ABS 0 - C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\MCU.X.production.o
-__size_of_setup 0 0 ABS 0 - dist/default/production\MCU.X.production.o
-___lldiv@counter 2D 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
-start_initialization 2A 0 CODE 0 cinit dist/default/production\MCU.X.production.o
-__end_of_segundo 5C0 0 CODE 0 text14 dist/default/production\MCU.X.production.o
+__size_of_Setup 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+___lldiv@counter 48 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+start_initialization 26 0 CODE 0 cinit dist/default/production\MCU.X.production.o
+__size_of_CONVET 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\MCU.X.production.o
-___lldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
-__end_of_minuto 610 0 CODE 0 text15 dist/default/production\MCU.X.production.o
+___lldiv@dividend 40 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+__end_of_RX 7EE 0 CODE 0 text8 dist/default/production\MCU.X.production.o
+__end_of_TX 7BE 0 CODE 0 text7 dist/default/production\MCU.X.production.o
+clear_ram0 838 0 CODE 0 clrtext dist/default/production\MCU.X.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\MCU.X.production.o
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+__pcstackBANK0 3C 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\MCU.X.production.o
-__end_of_initOsc 41C 0 CODE 0 text2 dist/default/production\MCU.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
+__end_of_initOsc 3EE 0 CODE 0 text6 dist/default/production\MCU.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 60 0 CODE 0 cinit -
+__Hcinit 46 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-I2C_Master_Write@d 20 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+I2C_Master_Write@d 73 0 COMMON 1 cstackCOMMON dist/default/production\MCU.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
-_I2C_Master_RepeatedStart 726 0 CODE 0 text8 dist/default/production\MCU.X.production.o
+_I2C_Master_RepeatedStart 826 0 CODE 0 text12 dist/default/production\MCU.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
-_conversion 41C 0 CODE 0 text4 dist/default/production\MCU.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit 2A 0 CODE 0 cinit -
+__Lcinit 26 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
-_PORTCbits 7 0 ABS 0 - dist/default/production\MCU.X.production.o
+__size_of_RX 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+__size_of_TX 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+_PORTAbits 5 0 ABS 0 - dist/default/production\MCU.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\MCU.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 24 0 CODE 0 init -
+__Hinit 20 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -472,7 +487,7 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 24 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -480,105 +495,105 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_D_W 3C 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
 _GIE 5F 0 ABS 0 - dist/default/production\MCU.X.production.o
-_H_D 3A 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_H_I 3B 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_M_D 38 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_M_I 39 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_S_D 36 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-_S_I 37 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
-__S0 39C 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+__S0 424 0 ABS 0 - -
+__S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 186 0 CODE 0 text13 dist/default/production\MCU.X.production.o
+_day 78 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
+_hor 2F 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_isr 3EE 0 CODE 0 text18 dist/default/production\MCU.X.production.o
+_min 2E 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_mou 79 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
+_seg 2D 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\MCU.X.production.o
-_I2C_Master_Start 714 0 CODE 0 text7 dist/default/production\MCU.X.production.o
-_I2C_Master_Write 6EE 0 CODE 0 text5 dist/default/production\MCU.X.production.o
-__end_of_isr 290 0 CODE 0 text13 dist/default/production\MCU.X.production.o
+_I2C_Master_Start 814 0 CODE 0 text11 dist/default/production\MCU.X.production.o
+_I2C_Master_Write 7EE 0 CODE 0 text9 dist/default/production\MCU.X.production.o
+__end_of_isr 49E 0 CODE 0 text18 dist/default/production\MCU.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\WILDER~1\AppData\Local\Temp\sn10.o
-__end_of_conversion 498 0 CODE 0 text4 dist/default/production\MCU.X.production.o
-initOsc@IRCF 22 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+___lldiv@divisor 3C 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\WILDER~1\AppData\Local\Temp\sgqk.o
+initOsc@IRCF 75 0 COMMON 1 cstackCOMMON dist/default/production\MCU.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_send_min 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+__size_of_send_seg 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\MCU.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\MCU.X.production.o
-__end_of_initUSART 6D4 0 CODE 0 text3 dist/default/production\MCU.X.production.o
-_minuto 5C0 0 CODE 0 text15 dist/default/production\MCU.X.production.o
-__ptext10 6D4 0 CODE 0 text10 dist/default/production\MCU.X.production.o
-__ptext11 498 0 CODE 0 text11 dist/default/production\MCU.X.production.o
-__ptext12 290 0 CODE 0 text12 dist/default/production\MCU.X.production.o
-__ptext13 186 0 CODE 0 text13 dist/default/production\MCU.X.production.o
-__ptext14 570 0 CODE 0 text14 dist/default/production\MCU.X.production.o
-__ptext15 5C0 0 CODE 0 text15 dist/default/production\MCU.X.production.o
-__ptext16 610 0 CODE 0 text16 dist/default/production\MCU.X.production.o
-__size_of_initUSART 0 0 ABS 0 - dist/default/production\MCU.X.production.o
-___lldiv 290 0 CODE 0 text12 dist/default/production\MCU.X.production.o
-__pmaintext 60 0 CODE 0 maintext dist/default/production\MCU.X.production.o
+__ptext10 802 0 CODE 0 text10 dist/default/production\MCU.X.production.o
+__ptext11 814 0 CODE 0 text11 dist/default/production\MCU.X.production.o
+__ptext12 826 0 CODE 0 text12 dist/default/production\MCU.X.production.o
+__ptext13 6F6 0 CODE 0 text13 dist/default/production\MCU.X.production.o
+__ptext14 7BE 0 CODE 0 text14 dist/default/production\MCU.X.production.o
+__ptext15 622 0 CODE 0 text15 dist/default/production\MCU.X.production.o
+__ptext16 1AC 0 CODE 0 text16 dist/default/production\MCU.X.production.o
+__ptext17 27C 0 CODE 0 text17 dist/default/production\MCU.X.production.o
+__ptext18 3EE 0 CODE 0 text18 dist/default/production\MCU.X.production.o
+___lldiv 1AC 0 CODE 0 text16 dist/default/production\MCU.X.production.o
+__pmaintext 46 0 CODE 0 maintext dist/default/production\MCU.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_initUSART 6AC 0 CODE 0 text3 dist/default/production\MCU.X.production.o
 __size_of_I2C_Master_RepeatedStart 0 0 ABS 0 - dist/default/production\MCU.X.production.o
-?_I2C_Master_Read 20 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
-_segundo 570 0 CODE 0 text14 dist/default/production\MCU.X.production.o
-__end_of_I2C_Master_Init 50C 0 CODE 0 text11 dist/default/production\MCU.X.production.o
-__end_of_I2C_Master_Read 570 0 CODE 0 text9 dist/default/production\MCU.X.production.o
-__end_of_I2C_Master_Stop 714 0 CODE 0 text6 dist/default/production\MCU.X.production.o
-__end_of_I2C_Master_Wait 6EE 0 CODE 0 text10 dist/default/production\MCU.X.production.o
-__end_of_I2C_Master_Start 726 0 CODE 0 text7 dist/default/production\MCU.X.production.o
+?_I2C_Master_Read 73 0 COMMON 1 cstackCOMMON dist/default/production\MCU.X.production.o
+_first_send 756 0 CODE 0 text1 dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_Init 696 0 CODE 0 text15 dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_Read 756 0 CODE 0 text13 dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_Stop 814 0 CODE 0 text10 dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_Wait 7D8 0 CODE 0 text14 dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_Start 826 0 CODE 0 text11 dist/default/production\MCU.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write 702 0 CODE 0 text5 dist/default/production\MCU.X.production.o
-__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
-__size_of_minuto 0 0 ABS 0 - dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_Write 802 0 CODE 0 text9 dist/default/production\MCU.X.production.o
+_send_min 52A 0 CODE 0 text3 dist/default/production\MCU.X.production.o
+_send_seg 49E 0 CODE 0 text2 dist/default/production\MCU.X.production.o
+__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\MCU.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\MCU.X.production.o
-__Lend_init 24 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 __size_of_I2C_Master_Write 0 0 ABS 0 - dist/default/production\MCU.X.production.o
-end_of_initialization 58 0 CODE 0 cinit dist/default/production\MCU.X.production.o
-__Hintentry 24 0 CODE 0 intentry -
+end_of_initialization 3E 0 CODE 0 cinit dist/default/production\MCU.X.production.o
+__end_of_send_min 5A6 0 CODE 0 text3 dist/default/production\MCU.X.production.o
+__end_of_send_seg 52A 0 CODE 0 text2 dist/default/production\MCU.X.production.o
+__Hintentry 20 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-?___lldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+?___lldiv 3C 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-_initOsc 360 0 CODE 0 text2 dist/default/production\MCU.X.production.o
+_initOsc 336 0 CODE 0 text6 dist/default/production\MCU.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\MCU.X.production.o
-__ptext1 660 0 CODE 0 text1 dist/default/production\MCU.X.production.o
-__ptext2 360 0 CODE 0 text2 dist/default/production\MCU.X.production.o
-__ptext3 6AC 0 CODE 0 text3 dist/default/production\MCU.X.production.o
-__ptext4 41C 0 CODE 0 text4 dist/default/production\MCU.X.production.o
-__ptext5 6EE 0 CODE 0 text5 dist/default/production\MCU.X.production.o
-__ptext6 702 0 CODE 0 text6 dist/default/production\MCU.X.production.o
-__ptext7 714 0 CODE 0 text7 dist/default/production\MCU.X.production.o
-__ptext8 726 0 CODE 0 text8 dist/default/production\MCU.X.production.o
-__ptext9 50C 0 CODE 0 text9 dist/default/production\MCU.X.production.o
+__ptext1 756 0 CODE 0 text1 dist/default/production\MCU.X.production.o
+__ptext2 49E 0 CODE 0 text2 dist/default/production\MCU.X.production.o
+__ptext3 52A 0 CODE 0 text3 dist/default/production\MCU.X.production.o
+__ptext4 5A6 0 CODE 0 text4 dist/default/production\MCU.X.production.o
+__ptext5 696 0 CODE 0 text5 dist/default/production\MCU.X.production.o
+__ptext6 336 0 CODE 0 text6 dist/default/production\MCU.X.production.o
+__ptext7 7A0 0 CODE 0 text7 dist/default/production\MCU.X.production.o
+__ptext8 7D8 0 CODE 0 text8 dist/default/production\MCU.X.production.o
+__ptext9 7EE 0 CODE 0 text9 dist/default/production\MCU.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init 498 0 CODE 0 text11 dist/default/production\MCU.X.production.o
-_I2C_Master_Read 50C 0 CODE 0 text9 dist/default/production\MCU.X.production.o
-_I2C_Master_Stop 702 0 CODE 0 text6 dist/default/production\MCU.X.production.o
-_I2C_Master_Wait 6D4 0 CODE 0 text10 dist/default/production\MCU.X.production.o
+__end_of_first_send 7A0 0 CODE 0 text1 dist/default/production\MCU.X.production.o
+_I2C_Master_Init 622 0 CODE 0 text15 dist/default/production\MCU.X.production.o
+_I2C_Master_Read 6F6 0 CODE 0 text13 dist/default/production\MCU.X.production.o
+_I2C_Master_Stop 802 0 CODE 0 text10 dist/default/production\MCU.X.production.o
+_I2C_Master_Wait 7BE 0 CODE 0 text14 dist/default/production\MCU.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of_I2C_Master_RepeatedStart 738 0 CODE 0 text8 dist/default/production\MCU.X.production.o
-__end_of__initialization 58 0 CODE 0 cinit dist/default/production\MCU.X.production.o
+__end_of_I2C_Master_RepeatedStart 838 0 CODE 0 text12 dist/default/production\MCU.X.production.o
+__end_of__initialization 3E 0 CODE 0 cinit dist/default/production\MCU.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__size_of_conversion 0 0 ABS 0 - dist/default/production\MCU.X.production.o
-___lldiv@quotient 29 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
-__pcstackCOMMON 76 0 COMMON 1 cstackCOMMON dist/default/production\MCU.X.production.o
+___lldiv@quotient 44 0 BANK0 1 cstackBANK0 dist/default/production\MCU.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\MCU.X.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\MCU.X.production.o
-__Hend_init 2A 0 CODE 0 end_init -
-__end_of_hora 660 0 CODE 0 text16 dist/default/production\MCU.X.production.o
-__end_of_main 186 0 CODE 0 maintext dist/default/production\MCU.X.production.o
+__Hend_init 26 0 CODE 0 end_init -
+__end_of_main 1AC 0 CODE 0 maintext dist/default/production\MCU.X.production.o
+__end_of_Setup 6F6 0 CODE 0 text5 dist/default/production\MCU.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\MCU.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\MCU.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\MCU.X.production.o
@@ -589,21 +604,31 @@ _RCREG 1A 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\MCU.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\MCU.X.production.o
+_Setup 696 0 CODE 0 text5 dist/default/production\MCU.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\MCU.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\MCU.X.production.o
-__end_of_setup 6AC 0 CODE 0 text1 dist/default/production\MCU.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\MCU.X.production.o
-_setup 660 0 CODE 0 text1 dist/default/production\MCU.X.production.o
+_day_t 24 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_day_u 29 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_hor_t 23 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_hor_u 28 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_min_t 22 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_min_u 27 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_mou_t 25 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_mou_u 2A 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_seg_t 21 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+_seg_u 26 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\MCU.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\MCU.X.production.o
-__initialization 2A 0 CODE 0 cinit dist/default/production\MCU.X.production.o
-__pbssBANK0 36 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
+__initialization 26 0 CODE 0 cinit dist/default/production\MCU.X.production.o
+__end_of_CONVET 336 0 CODE 0 text17 dist/default/production\MCU.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\MCU.X.production.o
 __size_of_I2C_Master_Init 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 __size_of_I2C_Master_Read 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 __size_of_I2C_Master_Stop 0 0 ABS 0 - dist/default/production\MCU.X.production.o
@@ -633,10 +658,10 @@ __size_of_I2C_Master_Wait 0 0 ABS 0 - dist/default/production\MCU.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackBANK0 1 20 20 25 1
-intentry 0 4 8 398 2
+cstackCOMMON 1 70 70 B 1
+intentry 0 4 8 420 2
 reset_vec 0 0 0 3 2
-bssCOMMON 1 70 70 C 1
+bssBANK0 1 20 20 2D 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

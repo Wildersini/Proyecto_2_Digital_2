@@ -27,49 +27,53 @@
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
 "67
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
-"47 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+"48 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
 [v _isr isr `II(v  1 e 1 0 ]
-"97
+"72
 [v _main main `(v  1 e 1 0 ]
-"126
-[v _setup setup `(v  1 e 1 0 ]
-"163
-[v _conversion conversion `(v  1 e 1 0 ]
-"188
-[v _hora hora `(v  1 e 1 0 ]
-"206
-[v _minuto minuto `(v  1 e 1 0 ]
-"224
-[v _segundo segundo `(v  1 e 1 0 ]
+"103
+[v _Setup Setup `(v  1 e 1 0 ]
+"140
+[v _CONVET CONVET `(v  1 e 1 0 ]
+"153
+[v _first_send first_send `(v  1 e 1 0 ]
+"158
+[v _send_hora send_hora `(v  1 e 1 0 ]
+"178
+[v _send_min send_min `(v  1 e 1 0 ]
+"198
+[v _send_seg send_seg `(v  1 e 1 0 ]
 "6 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
 [v _initOsc initOsc `(v  1 e 1 0 ]
-"17 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-[v _initUSART initUSART `(v  1 e 1 0 ]
+"38 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+[v _TX TX `(v  1 e 1 0 ]
+"48
+[v _RX RX `(v  1 e 1 0 ]
 "59 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "166
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S42 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"183
+[u S51 . 1 `S42 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES51  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "290
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S42 . 1 `uc 1 RC0 1 0 :1:0 
-`uc 1 RC1 1 0 :1:1 
-`uc 1 RC2 1 0 :1:2 
-`uc 1 RC3 1 0 :1:3 
-`uc 1 RC4 1 0 :1:4 
-`uc 1 RC5 1 0 :1:5 
-`uc 1 RC6 1 0 :1:6 
-`uc 1 RC7 1 0 :1:7 
-]
-"307
-[u S51 . 1 `S42 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES51  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S94 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S63 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -79,13 +83,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S103 . 1 `uc 1 . 1 0 :2:0 
+[s S72 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S108 . 1 `S94 1 . 1 0 `S103 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES108  1 e 1 @11 ]
+[u S77 . 1 `S63 1 . 1 0 `S72 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES77  1 e 1 @11 ]
 [s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -101,7 +105,7 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S432 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S480 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -111,23 +115,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S441 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S489 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S445 . 1 `uc 1 . 1 0 :6:0 
+[s S493 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S448 . 1 `uc 1 . 1 0 :6:0 
+[s S496 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S451 . 1 `S432 1 . 1 0 `S441 1 . 1 0 `S445 1 . 1 0 `S448 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES451  1 e 1 @24 ]
+[u S499 . 1 `S480 1 . 1 0 `S489 1 . 1 0 `S493 1 . 1 0 `S496 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES499  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
-[s S178 . 1 `uc 1 PS 1 0 :3:0 
+[s S166 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -135,19 +139,19 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1366
-[s S185 . 1 `uc 1 PS0 1 0 :1:0 
+[s S173 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S189 . 1 `S178 1 . 1 0 `S185 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES189  1 e 1 @129 ]
+[u S177 . 1 `S166 1 . 1 0 `S173 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES177  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1540
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S293 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S357 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -157,13 +161,13 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S302 . 1 `S293 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES302  1 e 1 @135 ]
+[u S366 . 1 `S357 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES366  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S75 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S147 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -172,25 +176,25 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1718
-[u S83 . 1 `S75 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES83  1 e 1 @140 ]
-[s S511 . 1 `uc 1 SCS 1 0 :1:0 
+[u S155 . 1 `S147 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES155  1 e 1 @140 ]
+[s S553 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S517 . 1 `uc 1 . 1 0 :4:0 
+[s S559 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S522 . 1 `S511 1 . 1 0 `S517 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES522  1 e 1 @143 ]
+[u S564 . 1 `S553 1 . 1 0 `S559 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES564  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S314 . 1 `uc 1 SEN 1 0 :1:0 
+[s S378 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -200,13 +204,13 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S323 . 1 `S314 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES323  1 e 1 @145 ]
+[u S387 . 1 `S378 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES387  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S372 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S218 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -216,20 +220,20 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S381 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S227 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S385 . 1 `uc 1 . 1 0 :6:0 
+[s S231 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S388 . 1 `S372 1 . 1 0 `S381 1 . 1 0 `S385 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES388  1 e 1 @152 ]
+[u S234 . 1 `S218 1 . 1 0 `S227 1 . 1 0 `S231 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES234  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2704
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
-[s S409 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S457 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -239,8 +243,8 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "3352
-[u S418 . 1 `S409 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES418  1 e 1 @391 ]
+[u S466 . 1 `S457 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES466  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -249,8 +253,6 @@
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "4040
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"4175
-[v _RCIF RCIF `VEb  1 e 0 @101 ]
 "4274
 [v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
 "4277
@@ -259,61 +261,88 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"4508
-[v _TRMT TRMT `VEb  1 e 0 @1217 ]
-"30 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-[v _T T `uc  1 e 1 0 ]
-[v _D D `uc  1 e 1 0 ]
-[v _H H `uc  1 e 1 0 ]
-[v _M M `uc  1 e 1 0 ]
-[v _S S `uc  1 e 1 0 ]
-[v _FS FS `uc  1 e 1 0 ]
-[v _FM FM `uc  1 e 1 0 ]
-[v _FH FH `uc  1 e 1 0 ]
-[v _w w `uc  1 e 1 0 ]
-[v _y y `uc  1 e 1 0 ]
-[v _z z `uc  1 e 1 0 ]
-[v _a a `uc  1 e 1 0 ]
-"31
-[v _D_W D_W `uc  1 e 1 0 ]
-[v _H_I H_I `uc  1 e 1 0 ]
-[v _H_D H_D `uc  1 e 1 0 ]
-[v _M_I M_I `uc  1 e 1 0 ]
-[v _M_D M_D `uc  1 e 1 0 ]
-[v _S_I S_I `uc  1 e 1 0 ]
-[v _S_D S_D `uc  1 e 1 0 ]
-"97
+"39 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+[v _r r `uc  1 e 1 0 ]
+[v _C C `uc  1 e 1 0 ]
+[v _h h `uc  1 e 1 0 ]
+[v _m m `uc  1 e 1 0 ]
+[v _s s `uc  1 e 1 0 ]
+[v _b b `uc  1 e 1 0 ]
+[v _g g `uc  1 e 1 0 ]
+"40
+[v _temp temp `uc  1 e 1 0 ]
+"41
+[v _mou mou `uc  1 e 1 0 ]
+[v _day day `uc  1 e 1 0 ]
+[v _hor hor `uc  1 e 1 0 ]
+[v _min min `uc  1 e 1 0 ]
+[v _seg seg `uc  1 e 1 0 ]
+[v _week week `uc  1 e 1 0 ]
+[v _year year `uc  1 e 1 0 ]
+"42
+[v _mou_u mou_u `uc  1 e 1 0 ]
+[v _day_u day_u `uc  1 e 1 0 ]
+[v _hor_u hor_u `uc  1 e 1 0 ]
+[v _min_u min_u `uc  1 e 1 0 ]
+[v _seg_u seg_u `uc  1 e 1 0 ]
+"43
+[v _mou_t mou_t `uc  1 e 1 0 ]
+[v _day_t day_t `uc  1 e 1 0 ]
+[v _hor_t hor_t `uc  1 e 1 0 ]
+[v _min_t min_t `uc  1 e 1 0 ]
+[v _seg_t seg_t `uc  1 e 1 0 ]
+"72
 [v _main main `(v  1 e 1 0 ]
 {
-"121
+"99
 } 0
-"126
-[v _setup setup `(v  1 e 1 0 ]
+"153
+[v _first_send first_send `(v  1 e 1 0 ]
 {
-"161
+"157
+} 0
+"198
+[v _send_seg send_seg `(v  1 e 1 0 ]
+{
+"219
+} 0
+"178
+[v _send_min send_min `(v  1 e 1 0 ]
+{
+"197
+} 0
+"158
+[v _send_hora send_hora `(v  1 e 1 0 ]
+{
+"177
+} 0
+"103
+[v _Setup Setup `(v  1 e 1 0 ]
+{
+"136
 } 0
 "6 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\OSC.c
 [v _initOsc initOsc `(v  1 e 1 0 ]
 {
 [v initOsc@IRCF IRCF `uc  1 a 1 wreg ]
 [v initOsc@IRCF IRCF `uc  1 a 1 wreg ]
-[v initOsc@IRCF IRCF `uc  1 a 1 2 ]
+[v initOsc@IRCF IRCF `uc  1 a 1 5 ]
 "55
 } 0
-"17 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
-[v _initUSART initUSART `(v  1 e 1 0 ]
+"38 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\UART.c
+[v _TX TX `(v  1 e 1 0 ]
 {
-"28
+"47
 } 0
-"163 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
-[v _conversion conversion `(v  1 e 1 0 ]
+"48
+[v _RX RX `(v  1 e 1 0 ]
 {
-"171
+"55
 } 0
 "58 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\I2C.c
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
 {
-[v I2C_Master_Write@d d `ui  1 p 2 0 ]
+[v I2C_Master_Write@d d `ui  1 p 2 3 ]
 "62
 } 0
 "48
@@ -335,9 +364,9 @@
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
 {
 "69
-[v I2C_Master_Read@temp temp `us  1 a 2 4 ]
+[v I2C_Master_Read@temp temp `us  1 a 2 0 ]
 "67
-[v I2C_Master_Read@a a `us  1 p 2 0 ]
+[v I2C_Master_Read@a a `us  1 p 2 3 ]
 "82
 } 0
 "25
@@ -348,38 +377,28 @@
 "9
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 {
-[v I2C_Master_Init@c c `DCul  1 p 4 14 ]
+[v I2C_Master_Init@c c `DCul  1 p 4 13 ]
 "17
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "10
-[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
 "11
-[v ___lldiv@counter counter `uc  1 a 1 13 ]
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
 "5
 [v ___lldiv@divisor divisor `ul  1 p 4 0 ]
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"47 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+"140 C:\Users\Wilder Guerrero\Desktop\Digital_2\Proyecto_2_Digital_2\Proyecto_2_Digital_2\MCU.X\MCU.c
+[v _CONVET CONVET `(v  1 e 1 0 ]
+{
+"151
+} 0
+"48
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"92
-} 0
-"224
-[v _segundo segundo `(v  1 e 1 0 ]
-{
-"240
-} 0
-"206
-[v _minuto minuto `(v  1 e 1 0 ]
-{
-"222
-} 0
-"188
-[v _hora hora `(v  1 e 1 0 ]
-{
-"204
+"68
 } 0

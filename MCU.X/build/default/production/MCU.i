@@ -7,8 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "MCU.c" 2
-
-#pragma config FOSC = EXTRC_NOCLKOUT
+#pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
@@ -22,7 +21,6 @@
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-
 
 
 
@@ -2511,10 +2509,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 20 "MCU.c" 2
+# 18 "MCU.c" 2
 
-# 1 "./I2C.h" 1
-# 13 "./I2C.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -2648,6 +2644,38 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
+# 19 "MCU.c" 2
+
+# 1 "./UART.h" 1
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 4 "./UART.h" 2
+
+
+
+
+
+
+
+void TX (void);
+void RX (void);
+# 20 "MCU.c" 2
+
+# 1 "./OSC.h" 1
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 4 "./OSC.h" 2
+
+void initOsc (uint8_t IRCF);
+# 21 "MCU.c" 2
+
+# 1 "./I2C.h" 1
+# 13 "./I2C.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "./I2C.h" 2
 # 22 "./I2C.h"
 void I2C_Master_Init(const unsigned long c);
@@ -2686,37 +2714,7 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 21 "MCU.c" 2
-
-# 1 "./OSC.h" 1
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 4 "./OSC.h" 2
-
-void initOsc (uint8_t IRCF);
 # 22 "MCU.c" 2
-
-# 1 "./UART.h" 1
-
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 9 "./UART.h" 2
-
-void initUSART (void);
-void baud (void);
-void conf_tx (void);
-void conf_rc (void);
-uint8_t R_UART ();
-void W_UART_S (char *a);
-# 23 "MCU.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2815,206 +2813,201 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 24 "MCU.c" 2
+# 23 "MCU.c" 2
 
 
 
 
 
 
-uint8_t T, D, H, M, S, FS, FM, FH, FD, x, w, y, z, a;
-uint8_t D_W, H_I, H_D, M_I, M_D, S_I, S_D;
+void Setup (void);
+void send_hora (void);
+void send_min (void);
+void send_seg (void);
+void CONVET (void);
+void first_send (void);
 
 
 
 
-void setup (void);
-void dia (void);
-void hora (void);
-void minuto (void);
-void segundo (void);
-void conversion (void);
-void enviar (void);
+uint8_t L,Z,z,r,C,q,h,m,s,M,b,g;
+uint8_t temp;
+uint8_t mou,day,hor,min,seg,week,year;
+uint8_t mou_u,day_u,hor_u,min_u,seg_u ;
+uint8_t mou_t,day_t,hor_t,min_t,seg_t ;
+uint8_t segundos ;
 
 
 
-
-void __attribute__((picinterrupt(("")))) isr (void) {
-    if (PIR1bits.RCIF == 1) {
-        T = 0;
-        T = RCREG;
-        if (T == 0x30) {
-            PORTCbits.RC1 = 0;} if (T == 0x31) {
-            PORTCbits.RC1 = 1;
-        } if (T == 0x32) {
-            PORTCbits.RC2 = 0; }
-        if (T == 0x33) {
-            PORTCbits.RC2 = 1;
-        } if (T == 0x34) {
-            FS = 1;
-        } if (T == 0x35) {
-            FM = 1;}
-        if (T == 0x36) {
-            FH = 1; }
-
-
+void __attribute__((picinterrupt(("")))) isr(void){
+    if (PIR1bits.RCIF==1){
+        temp = 0;
+        temp = RCREG;
+        if (temp == 0X30){PORTAbits.RA0=0;}
+        if (temp == 0X31){PORTAbits.RA0=1;}
+        if (temp == 0X32){PORTAbits.RA1=0;}
+        if (temp == 0X33){PORTAbits.RA1=1;}
+        if (temp == 0X34){C=1;}
+        if (temp == 0X35){b=1;}
+        if (temp == 0X36){g=1;}
     }
-     if (PIR1bits.TXIF == 1){
-        if (FS == 1){
-            segundo ();
-        }
-        if (FM == 1){
-            minuto ();
-        }
-        if (FH == 1){
-            hora ();
-        }
-
-
-
-        PIE1bits.TXIE = 0;
-     }
-    if (INTCONbits.TMR0IF == 1) {
-        TMR0 = 236;
-        INTCONbits.TMR0IF = 0;
-        a ++;
-        if (a == 10) {
-            a = 0;
+    if (INTCONbits.TMR0IF==1){
+        TMR0=236;
+        INTCONbits.TMR0IF=0;
+        r++;
+        if(r==10){
+            r=0;
         }
     }
-
-
 }
 
 
 
-
 void main(void) {
-
-    setup ();
-    initUSART ();
-    PORTCbits.RC1=1;
-    PORTCbits.RC2=1;
-    PORTCbits.RC1=0;
-    PORTCbits.RC2=0;
+    Setup();
+    PORTAbits.RA0=1;
+    PORTAbits.RA1=1;
+    PORTAbits.RA0=0;
+    PORTAbits.RA1=0;
     I2C_Master_Init(100000);
 
-    while (1) {
+
+
+    while (1){
+
         I2C_Master_Start();
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0x00);
         I2C_Master_RepeatedStart();
         I2C_Master_Write(0xD1);
-        S = I2C_Master_Read(1);
-        M = I2C_Master_Read(1);
-        H = I2C_Master_Read(1);
-        D = I2C_Master_Read(1);
+        seg = I2C_Master_Read(1);
+        min = I2C_Master_Read(1);
+        week = I2C_Master_Read(1);
+        hor = I2C_Master_Read(1);
+        day = I2C_Master_Read(1);
+        mou = I2C_Master_Read(1);
+        year= I2C_Master_Read(0);
         I2C_Master_Stop();
-        conversion ();
-    }
-    return;
-}
+        CONVET();
+        first_send();
+    }}
 
 
 
+void Setup(void){
 
-void setup (void) {
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
     PORTD = 0;
     PORTE = 0;
 
-    TRISA = 0;
-    TRISB = 0;
-    TRISC = 0;
-    TRISD = 0;
-    TRISE = 0;
+    TRISA = 0B00000000;
+    TRISB = 0B00000000;
+    TRISC = 0B00000000;
+    TRISD = 0B00000000;
+    TRISE = 0B0000;
 
-    ANSEL = 0;
-    ANSELH = 0;
+    ANSEL = 0B00000000;
+    ANSELH = 0B00000000;
 
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.TMR0IE = 1;
-    INTCONbits.TMR0IF = 0;
+    INTCONbits.GIE=1;
+    INTCONbits.PEIE=1;
+    INTCONbits.TMR0IE=1;
+    INTCONbits.TMR0IF=0;
     PIE1bits.RCIE = 1;
-    OPTION_REGbits.T0CS = 0;
-    OPTION_REGbits.T0SE = 0;
-    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.T0CS=0;
+    OPTION_REGbits.T0SE=0;
+    OPTION_REGbits.PSA=0;
 
-
-
-    OPTION_REGbits.PS0 = 1;
-    OPTION_REGbits.PS1 = 1;
-    OPTION_REGbits.PS2 = 1;
-
-
+    OPTION_REGbits.PS0=1;
+    OPTION_REGbits.PS1=1;
+    OPTION_REGbits.PS2=1;
 
     initOsc(6);
+    RX();
+    TX();
 }
 
-void conversion (void) {
-    D_W = (D & 0b00000111);
-    H_D = ((H & 0b00110000)>>4);
-    H_I = (H & 0b00001111);
-    M_D = ((M & 0b01110000)>>4);
-    M_I = (M & 0b00001111);
-    S_D = ((S & 0b01110000)>>4);
-    S_I = (S & 0b00001111);
+
+
+void CONVET (void){
+    mou_t = ((mou & 0b00010000)>>4);
+    mou_u = (mou & 0b00001111);
+    day_t = ((day & 0b00110000)>>4);
+    day_u = (day & 0b00001111);
+    hor_t = ((hor & 0b11000000)>>4);
+    hor_u = (hor & 0b00000011);
+    min_t = ((min & 0b01110000)>>4);
+    min_u = (min & 0b00001111);
+    seg_t = ((seg & 0b01110000)>>4);
+    seg_u = (seg & 0b00001111);
 }
-# 188 "MCU.c"
-void hora (void) {
-    switch (w) {
+
+void first_send (void){
+    if (C==1){send_seg();}
+    if (b==1){send_min();}
+    if (g==1){send_hora();}
+}
+void send_hora (void){
+
+    switch (h){
         case 0:
-            TXREG = (H_D + 0x30);
-            w ++;
+            TXREG = (hor_t+0x30);
+            while(!TXSTAbits.TRMT);
+            h++;
             break;
         case 1:
-            TXREG = (H_I + 0x31);
-            w ++;
+            TXREG = (hor_u+0x30);
+            while(!TXSTAbits.TRMT);
+            h++;
             break;
         case 2:
             TXREG = (0x3A);
-            w = 0;
-            FH = 0;
+            while(!TXSTAbits.TRMT);
+            h=0;
+            g=0;
             break;
-    }
-}
+    }}
+void send_min (void){
 
-void minuto (void) {
-    switch (y) {
+    switch (m){
         case 0:
-            TXREG = (M_D + 0x30);
-            y ++;
+             TXREG = (min_t+0x30);
+             while(!TXSTAbits.TRMT);
+             m++;
             break;
         case 1:
-            TXREG = (M_I + 0x31);
-            y ++;
+             TXREG = (min_u +0x30);
+             while(!TXSTAbits.TRMT);
+             m++;
             break;
         case 2:
-            TXREG = (0x3A);
-            y = 0;
-            FM = 0;
+            TXREG = (0x03);
+            while(!TXSTAbits.TRMT);
+            m=0;
+            b=0;
             break;
-    }
-}
+    }}
+void send_seg (void){
 
-void segundo (void) {
-    switch (z) {
+    switch (s){
         case 0:
-            TXREG = (S_D + 0x30);
-            z ++;
+            TXREG = (seg_t+0x30);
+            while(!TXSTAbits.TRMT);
+            s++;
             break;
         case 1:
-            TXREG = (S_I + 0x31);
-            z ++;
+            TXREG = (seg_u+0x30);
+            while(!TXSTAbits.TRMT);
+            s++;
+            s=0;
+            C=0;
             break;
         case 2:
-            TXREG = (0x3A);
-            z = 0;
-            FS = 0;
+            TXREG = (0x03);
+            while(!TXSTAbits.TRMT);
+            s=0;
+            C=0;
             break;
-    }
-}
+    }}
